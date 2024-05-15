@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Suhana Masala</title>
+
+  <!-- css -->
+  <link rel="stylesheet" href="./../style/home.css">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+
+
+
+  <!-- navbar -->
+  <nav class="">
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+      <div class="relative flex h-16 items-center justify-between">
+        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+          <!-- Mobile menu button-->
+          <button type="button"
+            class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+            aria-controls="mobile-menu" aria-expanded="false">
+            <span class="absolute -inset-0.5"></span>
+            <span class="sr-only">Open main menu</span>
+            <!--
+                  Icon when menu is closed.
+      
+                  Menu open: "hidden", Menu closed: "block"
+                -->
+            <img src="./../images/Home-images/suhana-logo.webp" alt="">
+            <!--
+                  Icon when menu is open.
+      
+                  Menu open: "block", Menu closed: "hidden"
+                -->
+
+          </button>
+        </div>
+        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+          <div class="flex flex-shrink-0 items-center">
+            <img class="h-8 w-auto" src="./../images/Home-images/suhana-logo.webp" alt="Suhana" height="50px"
+              width="200px">
+          </div>
+          <div class="hidden sm:ml-6 sm:block">
+            <div class="flex space-x-4">
+              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+              <a href="./pages/home.html" class=" text-white rounded-md px-3 py-2 text-xl font-medium hover:bg-gray-700"
+                aria-current="page">Home</a>
+
+              <a href="./pages/about.html"
+                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-xl font-medium">About</a>
+
+              <a href="./pages/product.html"
+                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-xl font-medium">Products</a>
+
+              <a href="./pages/contact.html"
+                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-xl font-medium">Contact</a>
+            </div>
+          </div>
+        </div>
+        <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+          <button type="button"
+            class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+            <span class="absolute -inset-1.5"></span>
+            <span class="sr-only bg-danger">View notifications</span>
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+              aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+            </svg>
+          </button>
+
+          <!-- Profile dropdown -->
+          <div class="relative ml-3">
+            <div class="d-flex">
+              <button type="button"
+                class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                <span class="absolute -inset-1.5"></span>
+                <span class="sr-only">Open user menu</span>
+
+                <img class="h-8 w-8 rounded-full" src="./../images/Home-images/profile.webp" alt="">
+
+
+              </button>
+
+            </div>
+
+            <!--
+                  Dropdown menu, show/hide based on menu state.
+      
+                  Entering: "transition ease-out duration-100"
+                    From: "transform opacity-0 scale-95"
+                    To: "transform opacity-100 scale-100"
+                  Leaving: "transition ease-in duration-75"
+                    From: "transform opacity-100 scale-100"
+                    To: "transform opacity-0 scale-95"
+                -->
+
+          </div>
+
+          <a href="./signin.html" class="text-lg font-semibold leading-6 text-white ms-3">sign in <span
+              aria-hidden="true">&rarr;</span></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="sm:hidden" id="mobile-menu">
+      <div class="space-y-1 px-2 pb-3 pt-2">
+        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+        <a href="./pages/home.html" class=" text-white block rounded-md px-3 py-2 text-base font-medium hover:bg-gray-700"
+          aria-current="page">Home</a>
+        <a href="./pages/about.html"
+          class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">About</a>
+        <a href="./pages/product.html"
+          class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Products</a>
+        <a href="./pages/contact.html"
+          class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- image-main -->
+  <img src="./../images/Home-images/home-main.webp" alt="" width="100%">
+
+  <!-- overview -->
+
+  <div class="overview">
+
+    <div class="image" style="margin: auto;">
+      <img src="./../images/Home-images/overview.webp" alt="">
+    </div>
+
+    <div class="para">
+      <h2>A pioneer in India for <br> ready-to-cook spices and <br> an exotic blend of flavors <br> in masala, Suhana
+        boasts <br> a tasteful legacy that <br> satiates your soul.
+      </h2>
+
+      <p class="mt-5">It’s been a Suhana Safar with humble <br> beginnings & love from our customers that <br> keep
+        making us
+        stronger!</p>
+
+      <button><a href="./about.html">Learn More</a></button>
+    </div>
+
+  </div>
+
+
+
+  <!-- top products -->
+  <div class="head mt-5">
+    Top Selling Product
+  </div>
+
+  <div class="bg-white">
+    <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+
+      <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8 ">
+
+        <a href="#" class="group">
+          <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+            <img src="./../images/Home-images/TOP-1.webp"
+              alt="Tall slender porcelain bottle with natural clay textured body and cork stopper."
+              class="h-60 w-full object-cover object-center group-hover:opacity-75 ">
+          </div>
+          <h3 class="mt-4 text-sm text-gray-700">Suhana Misal Rassa Masala 25g Pouch
+          </h3>
+          <p class="mt-1 text-lg font-medium text-gray-900">₹30 – ₹360</p>
+        </a>
+
+        <a href="#" class="group h-4">
+          <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7 ">
+            <img src="./../images/Home-images/TOP-2.webp"
+              alt="Olive drab green insulated bottle with flared screw lid and flat top."
+              class="h-60 w-full object-cover object-center group-hover:opacity-75 ">
+          </div>
+          <h3 class="mt-4 text-sm text-gray-700">Suhana Mutton Sukka Masala 25g Pouch</h3>
+          <p class="mt-1 text-lg font-medium text-gray-900">₹30 – ₹360</p>
+        </a>
+
+        <a href="#" class="group ">
+          <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+            <img src="./../images/Home-images/TOP-3.webp"
+              alt="Person using a pen to cross a task off a productivity paper card."
+              class="h-60 w-full object-cover object-center group-hover:opacity-75">
+          </div>
+          <h3 class="mt-4 text-sm text-gray-700">Suhana Upwas Bhajani 200g</h3>
+          <p class="mt-1 text-lg font-medium text-gray-900">₹30 – ₹220</p>
+        </a>
+
+        <a href="#" class="group">
+          <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+            <img src="./../images/Home-images/TOP-4.webp"
+              alt="Hand holding black machined steel mechanical pencil with brass tip and top."
+              class="h-60 w-full object-cover object-center group-hover:opacity-75">
+          </div>
+          <h3 class="mt-4 text-sm text-gray-700"> Suhana Besan Laddoo Mix 250g Box</h3>
+          <p class="mt-1 text-lg font-medium text-gray-900">₹120
+          </p>
+        </a>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Popular Product -->
+  <div class="head">
+    Popular Product
+  </div>
+
+  <div class="bg-white">
+    <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+
+      <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8 ">
+
+        <a href="#" class="group">
+          <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+            <img src="./../images/Home-images/pop-1.webp"
+              alt="Tall slender porcelain bottle with natural clay textured body and cork stopper."
+              class="h-60 w-full object-cover object-center group-hover:opacity-75 ">
+          </div>
+          <h3 class="mt-4 text-sm text-gray-700">Suhana Butter Chicken Spice Mix 25g Pouch</h3>
+          <p class="mt-1 text-lg font-medium text-gray-900">₹25 – ₹225</p>
+        </a>
+
+        <a href="#" class="group h-4">
+          <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7 ">
+            <img src="./../images/Home-images/pop-2.webp"
+              alt="Olive drab green insulated bottle with flared screw lid and flat top."
+              class="h-60 w-full object-cover object-center group-hover:opacity-75 ">
+          </div>
+          <h3 class="mt-4 text-sm text-gray-700">Suhana Pavbhaji Masala 100g Box</h3>
+          <p class="mt-1 text-lg font-medium text-gray-900">₹75 – ₹150</p>
+        </a>
+
+        <a href="#" class="group ">
+          <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+            <img src="./../images/Home-images/pop-3.webp"
+              alt="Person using a pen to cross a task off a productivity paper card."
+              class="h-60 w-full object-cover object-center group-hover:opacity-75">
+          </div>
+          <h3 class="mt-4 text-sm text-gray-700">Suhana Khaman Dhokla Instant Mix 200g Box</h3>
+          <p class="mt-1 text-lg font-medium text-gray-900">₹65 – ₹260</p>
+        </a>
+
+        <a href="#" class="group">
+          <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+            <img src="./../images/Home-images/pop-4.webp"
+              alt="Hand holding black machined steel mechanical pencil with brass tip and top."
+              class="h-60 w-full object-cover object-center group-hover:opacity-75">
+          </div>
+          <h3 class="mt-4 text-sm text-gray-700"> Suhana Kitchen King Masala 100g Box</h3>
+          <p class="mt-1 text-lg font-medium text-gray-900">₹74 – ₹148
+          </p>
+        </a>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- world img -->
+
+  <div class="head">
+    NO.1 SPICE BRAND IN INDIA
+  </div>
+
+  <section class="world">
+
+    <div class="world-para">
+      <h2>MADE IN
+        <span class="wspan-1">INDIA</span>
+        <br>
+        FOR THE
+        <span class="wspan-2">WORLD</span>
+      </h2>
+      <p>Serving 40+ countries across 5 continents</p>
+    </div>
+
+  </section>
+
+
+  <!--footer-->
+
+  <footer class="">
+
+    <br>
+    <div class="footer-box mt-5">
+
+      <div class="fbox">
+        <p>Solutions</p>
+
+        <a href="#" class="mt-5">Marketing</a>
+        <a href="#">Analytics</a>
+        <a href="#">Analytics</a>
+        <a href="#">Insights</a>
+      </div>
+
+      <div class="fbox">
+        <p>Support</p>
+
+        <a href="#" class="mt-5">Pricing</a>
+        <a href="#">Documentation</a>
+        <a href="#">Guides</a>
+        <a href="#">API Status</a>
+      </div>
+
+      <div class="fbox">
+        <p>Company</p>
+
+        <a href="#" class="mt-5">About</a>
+        <a href="#">Blog</a>
+        <a href="#">Jobs</a>
+        <a href="#">Press</a>
+        <a href="#">Partners</a>
+      </div>
+
+      <div class="fbox">
+        <p>Legal</p>
+
+        <a href="#" class="mt-5">Claim</a>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </div>
+
+      <div class="fbox-main">
+        <img src="./../images/Home-images/suhana-logo.webp" alt="">
+
+        <div class="icons">
+          <i class="fa-brands fa-instagram fa-2xl" style="color: #ffffff;"></i>
+          <i class="fa-brands fa-facebook-f fa-2xl" style="color: #ffffff;"></i>
+          <i class="fa-brands fa-youtube fa-2xl" style="color: #ffffff;"></i>
+        </div>
+      </div>
+
+    </div>
+
+    <p>Copyright © 2024 Suhana | All Rights Reserved</p>
+
+  </footer>
+
+
+</body>
+
+</html>
